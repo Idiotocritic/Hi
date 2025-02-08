@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #1A69A5;
+    background-color: #f2dd55;
 }
 
 #bigbox {
@@ -50,13 +50,13 @@ nav a:hover {
     height: 490px;
     width: 1000px;
     margin: 0 auto;
-    background-color: #86aacb;
+    background-color: #dea937;
 }
 
 #main_left {
     width: 300px;
     display: inline-block;
-    background-color: #86aacb;
+    background-color: #dea937;
     float: left;
 }
 
