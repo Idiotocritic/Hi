@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    /*body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f7fa;
+    }*/
+    /*多种颜色在动画过程中交替变化，适用于按钮、背景，给元素增加动感。*/
+    body {
+      background: linear-gradient(45deg, #ff6b6b, #f1c40f, #2ecc71, #3498db);
+      background-size: 400% 400%;
+      animation: gradientAnimation 10s ease infinite;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+    }
+
+    @keyframes gradientAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    /*1. 元素浮动动画 (Floating Effect)让元素看起来像是浮动的，可以用于按钮、图标或卡片，给页面带来活力。*/
+    /*@keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+    
+    #about {
+      animation: float 3s ease-in-out infinite;
+    }*/
+
+    /*2缩放动画 (Scaling)使元素在动画过程中放大或缩小，产生视差效果。这个效果让元素像是逐渐变大、变小，非常适合用在按钮或图标上*/
+    /*@keyframes scale {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.5); }
+      100% { transform: scale(1); }
+    }
+    
+    #about {
+      animation: scale 2s infinite ease-in-out;
+    }*/
+    /*4. 闪烁效果 (Blinking)让元素周期性地闪烁或消失与出现，常用于按钮或提醒信息。*/
+    /*@keyframes blink {
+      0% { opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    
+    #about {
+      animation: blink 1s infinite;
+    }*/
+    /*5. 3D 旋转效果 (3D Rotation)使用 perspective 和 transform，你可以实现更加复杂的 3D 动画效果。通常用于卡片翻转、旋转等效果。*/
+    /*@keyframes rotate3d {
+      0% { transform: rotateY(0deg); }
+      50% { transform: rotateY(180deg); }
+      100% { transform: rotateY(360deg); }
+    }
+    
+    #about {
+      animation: rotate3d 3s infinite;
+      transform-style: preserve-3d;
+      perspective: 500px;
+    }*/
+    /* 6. 倒计时效果 (Counting Animation)可以使数字元素进行动画过渡，模拟从一个值倒数或增长到另一个值。*/
+    
+    
+    /* Navigation Bar */
+    nav {
+      background-color: #333;
+      overflow: hidden;
+    }
+
+    nav a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background-color: #575757;
+    }
+
+    /* Container */
+    .container {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('https://via.placeholder.com/1500x500') no-repeat center center/cover;
+      height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    /* About Section */
+    #about {
+      background-color: #fff;
+      padding: 60px 0;
+      text-align: center;
+    }
+
+    #about h2 {
+      font-size: 2.5rem;
+      color: #333;
+    }
+
+    #about p {
+      font-size: 1.2rem;
+      color: #666;
+      line-height: 1.8;
+      margin-top: 20px;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Projects Section */
+    #projects {
+      background-color: #f9f9f9;
+      padding: 60px 0;
+    }
+
+    #projects h2 {
+      font-size: 2.5rem;
+      color: #333;
+      text-align: center;
+    }
+
+    .project-card {
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin: 20px;
+      padding: 20px;
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .project-card h3 {
+      color: #333;
+      margin-top: 15px;
+    }
+
+    .project-card p {
+      color: #777;
+      font-size: 1rem;
+      margin-top: 10px;
+    }
+
+    /* Contact Section */
+    #contact {
+      background-color: #333;
+      color: white;
+      padding: 60px 0;
+      text-align: center;
+    }
+
+    #contact h2 {
+      font-size: 2.5rem;
+    }
+
+    .social-icons a {
+      color: white;
+      font-size: 24px;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    .social-icons a:hover {
+      color: #4caf50;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="hero">
+    <h1>Welcome to My Portfolio</h1>
+  </div>
+
+  <div id="about" class="container">
+    <h2>About Me</h2>
+    <p>Hello, I'm [Your Name]. I'm a passionate developer with expertise in [Your Skills]. I love building things that make people's lives easier and more enjoyable. When I'm not coding, I enjoy [Hobbies or Interests].</p>
+  </div>
+
+  <div id="projects" class="container">
+    <h2>My Projects</h2>
+    <div class="project-card">
+      <img src="https://i.imgur.com/sz2KtwM.png" alt="Project 1">
+      <h3>Project 1</h3>
+      <p>A brief description of this project goes here. It’s a cool web app that solves a real problem.</p>
+    </div>
+    <div class="project-card">
+      <img src="https://via.placeholder.com/300x200" alt="Project 2">
+      <h3>Project 2</h3>
+      <p>This project was built with [technologies]. It’s a tool that helps people [solve a problem].</p>
+    </div>
+    <div class="project-card">
+      <img src="https://via.placeholder.com/300x200" alt="Project 3">
+      <h3>Project 3</h3>
+      <p>Another awesome project I worked on. It’s a mobile app that lets users [do something].</p>
+    </div>
+  </div>
+
+  <div id="contact" class="container">
+    <h2>Contact Me</h2>
+    <div class="social-icons">
+      <a href="https://github.com" target="_blank">GitHub</a>
+      <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+      <a href="mailto:youremail@example.com">Email</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 [Your Name]. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
