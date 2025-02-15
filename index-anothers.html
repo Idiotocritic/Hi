@@ -55,7 +55,7 @@
     #about {
       animation: rotateElement 3s infinite;
     } */
-    /*d. 弹跳效果 你可以让元素看起来像是弹跳一样，上下跳动：*/   
+    /*Makes it so something bouces up and down*/   
     @keyframes bounce {
       0%, 20%, 50%, 80%, 100% {
         transform: translateY(0);
@@ -71,7 +71,7 @@
     #about {
       animation: bounce 2s infinite;
     }
-    /*e. 透明度变化（渐隐渐现）改变元素的透明度，实现渐隐渐现的效果：在 4 秒内，元素从完全透明到完全不透明，再回到透明，并重复这个过程。*/
+    /*Makes it so it fades in and out*/
     @keyframes fadeInOut {
       0% { opacity: 0; }
       50% { opacity: 1; }
@@ -79,7 +79,7 @@
     }
     
     body {
-      animation: fadeInOut 4s infinite;
+      animation: fadeInOut 4s once;
     }
     /* Make the welcome to profolio type out*/
     /*@keyframes typing {
